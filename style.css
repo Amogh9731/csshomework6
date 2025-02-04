@@ -1,0 +1,50 @@
+/* Global reset for box-sizing to border-box */
+* {
+    box-sizing: border-box; /* Set box-sizing to border-box for all elements */
+  }
+  
+  /* Body styling */
+  body {
+    margin: 0;                /* Remove the default margin */
+    font-family: sans-serif;  /* Set the font family to sans-serif */
+    background-color: #f5f6f7; /* Set the background color to #f5f6f7 */
+  }
+  
+  /* Header styling */
+  .header {
+    text-align: center;           /* Align the text in the center */
+    text-transform: uppercase;    /* Make the text uppercase */
+    padding: 32px;                /* Add 32px padding on all sides */
+    background-color: #0a0a23;   /* Set the background color to #0a0a23 */
+    color: #fff;                  /* Set the text color to white */
+    border-bottom: 4px solid #fdb347; /* Add a 4px solid bottom border with #fdb347 */
+  }
+  
+  /* Gallery as a flex container */
+  .gallery {
+    display: flex;                /* Make the gallery a flex container */
+    flex-wrap: wrap;              /* Allow items to wrap onto new rows when necessary */
+    justify-content: center;      /* Center the items horizontally */
+    align-items: center;          /* Vertically center the items along the cross axis */
+    gap: 16px;                    /* Add 16px gap between the images (both rows and columns) */
+    padding: 20px 10px;           /* Add padding around the container (20px top/bottom, 10px left/right) */
+    flex-direction: row;          /* Ensure the items are in a horizontal row */
+    max-width: 1400px;            /* Set the maximum width of the gallery container */
+    margin: 0 auto;               /* Center the gallery container horizontally */
+  }
+  
+  /* Add ::after pseudo-element to .gallery */
+  .gallery::after {
+    content: "";                /* Create an empty pseudo-element */
+    width: 350px;               /* Set the width of the pseudo-element to 350px */
+  }
+  
+  /* Style for the images inside the gallery */
+  .gallery img {
+    width: 100%;        /* Set the image width to 100% of its container */
+    max-width: 350px;   /* Set a maximum width of 350px for each image */
+    height: 300px;      /* Set the height to 300px to maintain uniformity */
+    object-fit: cover;  /* Make the image fill the container while maintaining aspect ratio */
+    border-radius: 10px; /* Add rounded corners with a 10px radius */
+  }
+  
